@@ -133,6 +133,12 @@ void MainWindow::rectSelected(QRect rect)
     int top = (int) ((realHeight - realY) * heightRatio);
     int bottom = (int) (((realHeight - realY - rect.height())) * heightRatio);
 
+    int trimLeft = (int) realX * widthRatio;
+    int trimTop = (int) realY * heightRatio;
+    int trimRight = (int) (realWidth - (realX + rect.width())) * widthRatio;
+    int trimBottom = (int) (realHeight - (realY + rect.height())) * heightRatio;
+
+    ui->trimBox->setText(QString("%1, %2, %3, %4").arg(trimLeft).arg(trimBottom).arg(trimRight).arg(trimTop));
     ui->cropBox->setText(QString("%1 %2 %3 %4").arg(left).arg(top).arg(right).arg(bottom));
 }
 

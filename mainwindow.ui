@@ -73,6 +73,16 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
+          <string>LaTeX trimbox:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="trimBox"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
           <string>Cropbox:</string>
          </property>
         </widget>
